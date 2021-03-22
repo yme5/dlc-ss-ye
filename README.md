@@ -1,3 +1,3 @@
 # dlc-ss-ye
 
-Sup G
+https://yme5.github.io/dlc-ss-ye/
