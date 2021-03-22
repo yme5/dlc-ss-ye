@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+      <title>Web Server Tutorial</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+                integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+                crossorigin="anonymous"></script>
+            <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+            <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/Containerization/index.html">How the Internet Works</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/Containerizationabout.html">About this Project</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Containerization/team.html">Meet the Team</a>
+                </li>
+              <li class="nav-item dropdown">
+                <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Phases
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="/Containerization/HTTP%20and%20HTML.html">HTTP</a>
+                  <a class="dropdown-item" href="/Containerization/Encryption%20Public%20Keys.html">Encryption</a>
+                  <a class="dropdown-item" href="/Containerization/IP%20Addresses%20and%20DNS.html">IP Addresses</a>
+                  <a class="dropdown-item" href="/Containerization/What%20is%20the%20Internet.html">Internet</a>
+                  <a class="dropdown-item" href="/Containerization/Wires%20Cables%20Wifi.html">Hardware</a>
+                    <a class="dropdown-item" href="/Containerization/Packets%20Routing%20Reliability.html">Data Transfer</a>
+                </div>
+              </li>
+              </ul>
+          </div>
+        </nav>
+          <hr>
+
+          <div class ="container"><!-- This is the title row per se -->
+            <div class = "row justify-content-between my-5">
+                <div class="col">
+                      <h1 class="display-1 " >
+                        Tutorial: Web Server
+                      </h1>
+                </div>
+                <div class ="col-4 align-self-center ">
+                      <h2 class="text-end">
+                          Yousug Elkhoga
+                        </h2 >
+                        <h3 class="text-end">
+                          Mar 22, 2021
+                        </h3 >
+                </div>
+            </div>
+          </div>
+
+        <div class="container">
+            <hr>
+        </div>
+
+
+          <div class = "container"> <!-- this is one section  left alighned -->
+              <div class = "row mb-3">
+                  <div class = "col-8 bg-light">
+                      <p style="font-size:20px;">
+                                    <ul style="list-style-type: undefined;">
+                                        <li>Step 1: Install Docker &nbsp;<ol style="list-style-type: circle;">
+                                                <li>Install Docker by going to the docker.com installation page here. (<a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows/">https://hub.docker.com/editions/community/docker-ce-desktop-windows/</a> ) and downloading the Docker Desktop Installer. For Windows users, installation and enabling of WSL 2 (Windows Subsystem for Linux, Version 2) will be necessary as well. To do so, refer to this page. (<a href="https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers">https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers</a>)</li>
+                                                <li>After installation, complete the initialization process.</li>
+                                                <li>Open the terminal and run the command &lsquo;docker&rsquo; to make sure that docker is running.</li>
+                                                <li>Docker Desktop includes Docker Desktop and Docker Compose, this means that the user is ready to set up a web server on the local machine.</li>
+                                            </ol>
+                                        </li>
+                                        <li>Step 2: Setup a web server.<ol style="list-style-type: circle;">
+                                                <li>Begin by creating a directory for the project:<ul style="list-style-type: square;">
+                                                        <li>Use the command mkdir &lt;directoryname&gt;, then cd &lt;directoryname&gt;</li>
+                                                    </ul>
+                                                </li>
+                                                <li>Then create an app.py file in the directory &lt;directoryname&gt;<ul style="list-style-type: square;">
+                                                        <li>In this file; use this code</li>
+                                                    </ul>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;color:darkmagenta;">import</span><span style="font-size:13px;font-family:Consolas;">&nbsp;<span style="color:#008B45;">time</span></span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp;</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;color:darkmagenta;">import</span><span style="font-size:13px;font-family:Consolas;">&nbsp;<span style="color:#008B45;">redis</span></span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;color:darkmagenta;">from</span><span style="font-size:13px;font-family:Consolas;">&nbsp;<span style="color:#008B45;">flask</span> <span style="color:darkmagenta;">import</span> Flask</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp;</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">app = Flask(__name__)</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">cache = redis.Redis(host=<span style="color:#CD5555;">&apos;redis&apos;</span>, port=<span style="color:#B452CD;">6379</span>)</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp;</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;color:darkmagenta;">def</span><span style="font-size:13px;font-family:Consolas;">&nbsp;get_hit_count():</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp;retries = <span style="color:#B452CD;">5</span></span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; <span style="color:darkmagenta;">while</span> <span style="color:#658B00;">True</span>:</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:darkmagenta;">try</span>:</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:darkmagenta;">return</span> cache.incr(<span style="color:#CD5555;">&apos;hits&apos;</span>)</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:darkmagenta;">except</span> redis.exceptions.ConnectionError <span style="color:darkmagenta;">as</span> exc:</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color:darkmagenta;">if</span> retries == <span style="color:#B452CD;">0</span>:</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color:darkmagenta;">raise</span> exc</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;retries -= <span style="color:#B452CD;">1</span></span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;time.sleep(<span style="color:#B452CD;">0.5</span>)</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp;</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;color:#707A7C;">@app.route</span><span style="font-size:13px;font-family:Consolas;">(<span style="color:#CD5555;">&apos;/&apos;</span>)</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;color:darkmagenta;">def</span><span style="font-size:13px;font-family:Consolas;">&nbsp;hello():</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; &nbsp;count = get_hit_count()</span></p>
+                                    <p style='margin-top:0in;margin-right:0in;margin-bottom:7.5pt;margin-left:.25in;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;'><span style="font-size:13px;font-family:Consolas;">&nbsp; &nbsp; <span style="color:darkmagenta;">return</span> <span style="color:#CD5555;">&apos;Hello World! I have been seen {} times.\n&apos;</span>.format(count)</span></p>
+                                    <ol style="list-style-type: circle;">
+                                        <li>Create a requirements.txt file in the directory &lt;directoryname&gt;<ul style="list-style-type: square;">
+                                                <li>Use these requirements</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><code style='font-family:"Courier New";'><span style="font-family:Consolas;">flask</span></code></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><code style='font-family:"Courier New";'><span style="font-family:Consolas;">redis</span></code></pre>
+                                    <ol style="list-style-type: circle;">
+                                        <li>Move on to creating the Dockerfile<ul style="list-style-type: square;">
+                                                <li>Remember that the Dockerfile are the &ldquo;plans&rdquo; from which the Docker Image is built<ul style="list-style-type: disc;">
+                                                        <li>This will include all the dependencies for the Python application (including Python). The application from above (app.py) needs the dependencies we are going to define to run</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>In the project directory, create a file called Dockerfile<ul class="decimal_type" style="list-style-type: square;">
+                                                <li>Make sure to not include a file extension!!!</li>
+                                                <li>Include the following commands in the Dockerfile</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">FROM</span><span style="font-family:Consolas;color:#CD5555;"> python:3.7-alpine </span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">WORKDIR</span><span style="font-family:Consolas;color:#CD5555;"> /code</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">ENV</span><span style="font-family:Consolas;color:#CD5555;"> FLASK_APP=app.py</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">ENV</span><span style="font-family:Consolas;color:#CD5555;"> FLASK_RUN_HOST=0.0.0.0</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">RUN </span><code style='font-family:"Courier New";'><span style="font-family:Consolas;">apk add </span></code><span style="font-family:Consolas;color:darkmagenta;">--no-cache</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;"> gcc musl-dev linux-headers</span></code></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">COPY</span><span style="font-family:Consolas;color:#CD5555;"> requirements.txt requirements.txt</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">RUN </span><code style='font-family:"Courier New";'><span style="font-family:Consolas;">pip install </span></code><span style="font-family:Consolas;color:darkmagenta;">-r</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;"> requirements.txt</span></code></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">EXPOSE</span><span style="font-family:Consolas;color:#CD5555;"> 5000</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">COPY</span><span style="font-family:Consolas;color:#CD5555;"> . .</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;'><span style="font-family:Consolas;color:darkmagenta;">CMD</span><span style="font-family:Consolas;color:#CD5555;"> [&quot;flask&quot;, &quot;run&quot;]</span></pre>
+                                    <ol style="list-style-type: circle;">
+                                        <li>Create the Compose file<ul class="decimal_type" style="list-style-type: square;">
+                                                <li>The Compose file is created using YAML. ( What does It do? ) For this example; use these definitions in the file.</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;background:white;'><span style="font-family:Consolas;color:#658B00;">version</span><span style="font-family:Consolas;color:#33444D;">:</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;"> </span></code><span style="font-family:Consolas;color:#CD5555;">&quot;</span><span style="font-family:Consolas;color:#CD5555;">3.9&quot;</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;background:white;'><span style="font-family:Consolas;color:#658B00;">services</span><span style="font-family:Consolas;color:#33444D;">:</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;background:white;'><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;">  </span></code><span style="font-family:Consolas;color:#658B00;">web</span><span style="font-family:Consolas;color:#33444D;">:</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;background:white;'><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;">    </span></code><span style="font-family:Consolas;color:#658B00;">build</span><span style="font-family:Consolas;color:#33444D;">:</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;"> </span></code><span style="font-family:Consolas;color:#CD5555;">.</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;background:white;'><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;">    </span></code><span style="font-family:Consolas;color:#658B00;">ports</span><span style="font-family:Consolas;color:#33444D;">:</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;background:white;'><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;">      </span></code><span style="font-family:Consolas;color:#33444D;">-</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;"> </span></code><span style="font-family:Consolas;color:#CD5555;">&quot;</span><span style="font-family:Consolas;color:#CD5555;">5000:5000&quot;</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;background:white;'><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;">  </span></code><span style="font-family:Consolas;color:#658B00;">redis</span><span style="font-family:Consolas;color:#33444D;">:</span></pre>
+                                    <pre style='margin:0in;margin-bottom:7.5pt;font-size:13px;font-family:"Courier New";margin-top:0in;margin-right:0in;margin-left:.25in;background:white;'><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;">    </span></code><span style="font-family:Consolas;color:#658B00;">image</span><span style="font-family:Consolas;color:#33444D;">:</span><code style='font-family:"Courier New";'><span style="font-family:Consolas;color:#33444D;"> </span></code><span style="font-family:Consolas;color:#CD5555;">&quot;</span><span style="font-family:Consolas;color:#CD5555;">redis:alpine&quot;</span></pre>
+                                    <ol style="list-style-type: circle;">
+                                        <li>Run the compose file<ul style="list-style-type: square;">
+                                                <li>Navigate to the project directory in the terminal. Run the command &lt;docker-compose up&gt; This will run the compose file and start the application. In this case, the webapp is running on port 5000</li>
+                                            </ul>
+                                        </li>
+                                        <li>Got to http://localhost:5000/&nbsp;in a browser.</li>
+                                        <li>Congratulations on setting up a web server!</li>
+                                    </ol>
+
+                      </p>
+                  </div>
+                  <div class = "col-4">
+                      <img src="https://raw.githubusercontent.com/yme5/dlc-ss-ye/master/.images/Linux%20Commands.png" class="img-thumbnail" alt="Web%20Browser" >
+                  </div>
+              </div>
+          </div>
+
+
+</body>
+</html>
